@@ -1,0 +1,15 @@
+2019-03-01 06:54:06 pid:1 PDOException: SQL:SELECT ID,Sex FROM `Persons` WHERE sex='M' AND ID = 1 SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mytest.persons' doesn't exist in D:\phpstudy\WWW\workermancode\vendor\workerman\mysql\src\Connection.php:1772
+Stack trace:
+#0 D:\phpstudy\WWW\workermancode\vendor\workerman\mysql\src\Connection.php(1830): Workerman\MySQL\Connection->execute('SELECT ID,Sex F...', NULL)
+#1 D:\phpstudy\WWW\workermancode\province_demo.php(36): Workerman\MySQL\Connection->query('SELECT ID,Sex F...')
+#2 [internal function]: {closure}(Object(Workerman\Connection\TcpConnection), 'tom')
+#3 D:\phpstudy\WWW\workermancode\Workerman\Connection\TcpConnection.php(658): call_user_func(Object(Closure), Object(Workerman\Connection\TcpConnection), 'tom')
+#4 [internal function]: Workerman\Connection\TcpConnection->baseRead(Resource id #22)
+#5 D:\phpstudy\WWW\workermancode\Workerman\Events\Select.php(295): call_user_func_array(Array, Array)
+#6 D:\phpstudy\WWW\workermancode\Workerman\Worker.php(2321): Workerman\Events\Select->loop()
+#7 D:\phpstudy\WWW\workermancode\Workerman\Worker.php(1315): Workerman\Worker->run()
+#8 D:\phpstudy\WWW\workermancode\Workerman\Worker.php(1258): Workerman\Worker::forkWorkersForWindows()
+#9 D:\phpstudy\WWW\workermancode\Workerman\Worker.php(507): Workerman\Worker::forkWorkers()
+#10 D:\phpstudy\WWW\workermancode\province_demo.php(52): Workerman\Worker::runAll()
+#11 {main}
+2019-03-01 06:54:06 pid:1 Worker process terminated
